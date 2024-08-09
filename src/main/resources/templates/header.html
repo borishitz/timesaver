@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org"
-                xmlns:sec="http://www.thymeleaf.org">
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
   <div th:fragment ="header">
   <head>
     <!-- Basic -->
@@ -50,29 +50,107 @@
               </button>
 
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav  ml-auto" sec:authorize="isAuthenticated()">
-                  <li class="nav-item active">
-                    <a class="nav-link" th:href="@{/}">Home</a>
-                  </li>
-                  <li class="nav-item active">
-                    <a class="nav-link" th:href="@{/dashboard}">Dashboard</a>
-                  </li>
-                </ul>
-                <ul class="navbar-nav  ml-auto" sec:authorize="!isAuthenticated()">
+<!--                <ul class="navbar-nav  ml-auto" sec:authorize="isAuthenticated()" >-->
+<!--                  <li class="nav-item">-->
+<!--                    <a class="nav-link" th:href="@{/dashboard}">-->
+<!--                      <i class="fa fa-dashboard" aria-hidden="true"></i>-->
+<!--                      <span>-->
+<!--                          Dashboard-->
+<!--                        </span>-->
+<!--                    </a>-->
+<!--                  </li>-->
+<!--                  <li class="nav-item">-->
+<!--                    <a class="nav-link" th:href="@{/logout}">-->
+<!--                      <i class="fa fa-user" aria-hidden="true"></i>-->
+<!--                      <span>-->
+<!--                          Logout-->
+<!--                        </span>-->
+<!--                    </a>-->
+<!--                  </li>-->
+<!--                  <li class="nav-item">-->
+<!--                    <a class="nav-link" th:href="@{/profile}">-->
+<!--                      <i class="fa fa-user" aria-hidden="true"></i>-->
+<!--                      <span>-->
+<!--                          Profile-->
+<!--                        </span>-->
+<!--                    </a>-->
+<!--                  </li>-->
+<!--                  <li class="nav-item">-->
+<!--                    <a class="nav-link" th:href="@{/cart}">-->
+<!--                      <i class="fa fa-shopping-cart" aria-hidden="true"></i>-->
+<!--                      <span th:text="${cartCount}">-->
+
+<!--                        </span>-->
+<!--                    </a>-->
+<!--                  </li>-->
+<!--                </ul>-->
+<!--                <ul class="navbar-nav  ml-auto" sec:authorize="!isAuthenticated()" >-->
+<!--                  <li class="nav-item">-->
+<!--                    <a class="nav-link" th:href="@{/login}">-->
+<!--                      <i class="fa fa-user" aria-hidden="true"></i>-->
+<!--                      <span>-->
+<!--                          Login-->
+<!--                        </span>-->
+<!--                    </a>-->
+<!--                  </li>-->
+
+<!--                  <li class="nav-item">-->
+<!--                    <a class="nav-link" th:href="@{/register}">-->
+<!--                      <i class="fa fa-user" aria-hidden="true"></i>-->
+<!--                      <span>-->
+<!--                          Sign Up-->
+<!--                        </span>-->
+<!--                    </a>-->
+<!--                  </li>-->
+<!--                  <li class="nav-item">-->
+<!--                    <a class="nav-link" th:href="@{/cart}">-->
+<!--                      <i class="fa fa-shopping-cart" aria-hidden="true"></i>-->
+<!--                      <span th:text="${cartCount}">-->
+
+<!--                        </span>-->
+<!--                    </a>-->
+<!--                  </li>-->
+<!--                </ul>-->
+                <ul class="navbar-nav  ml-auto" sec:authorize="!isAuthenticated()" >
                   <li class="nav-item">
-                    <a class="nav-link" th:href="@{/login}">
-                      <i class="fa fa-user" aria-hidden="true"></i>
+                    <a class="nav-link" th:href="@{/dashboard}">
+                      <i class="fa fa-dashboard" aria-hidden="true"></i>
                       <span>
-                          Login
-                        </span>
+                            Dashboard
+                      </span>
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" th:href="@{/register}">
+                    <a class="nav-link" th:href="@{/profile}">
                       <i class="fa fa-user" aria-hidden="true"></i>
                       <span>
-                          Sign Up
-                        </span>
+                                    Profile
+                                  </span>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" th:href="@{/login}">
+                      <i class="fa-solid fa-right-to-bracket" aria-hidden="true"></i>
+                      <span>
+                        Login
+                      </span>
+                    </a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a class="nav-link" th:href="@{/register}">
+                      <i class="fa-solid fa-users-line" aria-hidden="true"></i>
+                      <span>
+                        Sign Up
+                      </span>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" th:href="@{/logout}">
+<!--                      <i class="fa fa-user" aria-hidden="true"></i>-->
+                      <span>
+                         Logout
+                      </span>
                     </a>
                   </li>
                   <li class="nav-item">
@@ -80,7 +158,7 @@
                       <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                       <span th:text="${cartCount}">
 
-                        </span>
+                      </span>
                     </a>
                   </li>
                 </ul>
