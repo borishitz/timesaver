@@ -24,6 +24,7 @@ public class ProductController {
 
     @Autowired
     private ProductSer productSer;
+
     @Autowired
     private ProductRepo productRepo;
 

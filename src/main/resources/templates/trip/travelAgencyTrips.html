@@ -20,21 +20,21 @@
                     <div class="box">
                         <div class="job_content-box">
                             <div class="img-box">
-                                <img src="images/bus-png-4.png" alt="">
+                                <img th:src="@{./images/bus-png-4.png}" alt="">
                             </div>
                             <div class="detail-box">
+                                <h6 class="row">
+                                    <i class="fa-solid fa-bus mr-2"></i></i>
+                                    <span th:text="${model.TravelAgency.agencyName}">
+                                                Washington. D.C.
+                                            </span>
+                                </h6>
                                 <h5>
                                     From: <span th:text="${model.startLocation}"></span> to <span th:text="${model.destination}"></span>
                                 </h5>
                                 <div class="detail-info">
-                                    <!--                                        <h6>-->
-                                    <!--                                            <i class="fa fa-map-marker" aria-hidden="true"></i>-->
-                                    <!--                                                <span th:text="${model.destination}">-->
-                                    <!--                                                    Washington. D.C.-->
-                                    <!--                                                </span>-->
-                                    <!--                                        </h6>-->
                                     <span class="mx-3">
-                                        <i class="fa fa-money" aria-hidden="true"></i>
+                                        <span class="text-info">Bus No: </span>
                                         <span th:text="${model.busNumber}">
                                             $1200 - $1300
                                         </span>
@@ -55,7 +55,7 @@
                                         <i class="fa fa-heart-o" aria-hidden="true"></i>
                                     </button>
                                     <a class="apply-btn"
-                                       th:href="@{'/addToCart/' + ${model.id}}">
+                                       th:href="@{'/addToCartTrips/' + ${model.id}}">
                                         Add Ticket
                                     </a>
                                 </div>

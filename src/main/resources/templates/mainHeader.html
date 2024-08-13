@@ -114,8 +114,8 @@
                               <a class="nav-link" th:href="@{/register}">
                                 <i class="fa-solid fa-users-line" aria-hidden="true"></i>
                                 <span>
-                                    Sign Up
-                                  </span>
+                                  Sign Up
+                                </span>
                               </a>
                             </li>
                             <li class="nav-item">
@@ -126,14 +126,22 @@
                                   </span>
                               </a>
                             </li>
-                            <li class="nav-item">
-                              <a class="nav-link" th:href="@{/cart}">
-                                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                                <span th:text="${cartCount}">
+<!--                            <li class="nav-item">-->
+<!--                              <a class="nav-link" th:href="@{/cart}">-->
+<!--                                <i class="fa fa-shopping-cart" aria-hidden="true"></i>-->
+<!--                                <span th:text="${cartCount}">-->
 
-                                  </span>
-                              </a>
-                            </li>
+<!--                                  </span>-->
+<!--                              </a>-->
+<!--                            </li>-->
+                              <li class="nav-item">
+                                  <a class="nav-link" th:href="@{/cartTrip}">
+                                      <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                      <span th:text="${cartCountTrip}">
+
+                                      </span>
+                                  </a>
+                              </li>
                           </ul>
                         </div>
                       </nav>

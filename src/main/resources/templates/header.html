@@ -128,7 +128,7 @@
                                   </span>
                     </a>
                   </li>
-                  <li class="nav-item">
+                  <li class="nav-item" th:if="${session.gmail == null}">
                     <a class="nav-link" th:href="@{/login}">
                       <i class="fa-solid fa-right-to-bracket" aria-hidden="true"></i>
                       <span>
@@ -154,9 +154,16 @@
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" th:href="@{/cart}">
+                    <a class="nav-link" th:href="@{/testCart}">
+                      <p class="fa fa-shopping-cart">My Cart</p>
+<!--                      <span th:text="${cartCount}">-->
+<!--                      </span>-->
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" th:href="@{/cartTrip}">
                       <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                      <span th:text="${cartCount}">
+                      <span th:text="${cartCountTrip}">
 
                       </span>
                     </a>

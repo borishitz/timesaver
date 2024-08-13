@@ -5,6 +5,7 @@ import com.timesaver.timesaver.domain.Shop;
 import com.timesaver.timesaver.domain.TravelAgency;
 import com.timesaver.timesaver.domain.Trip;
 import com.timesaver.timesaver.global.GlobalData;
+import com.timesaver.timesaver.global.GlobalTrips;
 import com.timesaver.timesaver.repository.TravelAgencyRepo;
 import com.timesaver.timesaver.repository.TripRepo;
 import com.timesaver.timesaver.services.TripSer;
@@ -35,6 +36,7 @@ public class TripController {
     public String getAllTrips(Model model){
         List<Trip> tripList = tripSer.getAllTrips();
         model.addAttribute("cartCount", GlobalData.cart.size());
+        model.addAttribute("cartCountTrip", GlobalTrips.cart.size());
         model.addAttribute("tripList", tripList);
         return "trip/allTrips";
     }
@@ -63,6 +65,7 @@ public class TripController {
         model.addAttribute("travelAgencyTrip",travelAgencyTrip);
         model.addAttribute("travelAgency", travelAgency);
         model.addAttribute("cartCount", GlobalData.cart.size());
+        model.addAttribute("cartCountTrip", GlobalTrips.cart.size());
         return "trip/travelAgencyTrips";
     }
 
@@ -71,6 +74,7 @@ public class TripController {
     public String showTripDetail(@PathVariable("id") Long id, Model model){
         Trip trip = tripRepo.findById(id).get();
         model.addAttribute("cartCount", GlobalData.cart.size());
+        model.addAttribute("cartCountTrip", GlobalTrips.cart.size());
         model.addAttribute("trip", trip);
         return "trip/tripDetail";
     }

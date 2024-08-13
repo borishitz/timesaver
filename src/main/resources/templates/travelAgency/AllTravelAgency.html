@@ -24,7 +24,7 @@
                             <h5 class="card-title" th:text="${model.agencyName}">Card title</h5>
                             <p class="card-text" th:text="${model.agencyLocation}">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                             <a th:href="@{'/new/trip/' + ${model.id}}" class="btn btn-primary" data-mdb-ripple-init>Create Trip</a>
-                            <a th:href="@{/travelAgency/trips/{id}(id=${model.id})}" class="btn btn-primary" data-mdb-ripple-init>View</a>
+                            <a th:href="@{/travelAgency/trips/{id}(id=${model.id})}" class="btn btn-light" data-mdb-ripple-init>View Trips</a>
                         </div>
                     </div>
                 </div>
